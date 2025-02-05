@@ -2,12 +2,12 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { GlobalStyles } from '@/theme/GlobalStyles'
 
-const ScreenConfiguracion = () => {
+const ScreenProductos = () => {
   return (
     <View style={GlobalStyles.containerCentrado}>
-      <Text style= {GlobalStyles.titulo}>Screen Configuracion</Text>
+      <Text style= {GlobalStyles.titulo}>Datos de la base de datos</Text>
     </View>
   )
 }
 
-export default ScreenConfiguracion
+export default ScreenProductos

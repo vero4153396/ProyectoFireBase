@@ -4,28 +4,31 @@ import { Ionicons } from '@expo/vector-icons';
 
 const TabsLayout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: 'pink',
+      tabBarStyle: {
+        backgroundColor: "#222",       // Color del borde superior
+      },
+      tabBarLabelStyle: {
+        fontSize: 11,                  // Tamaño del texto
+        fontWeight: "bold",            // Negrita en los labels
+      },
+    }}>
       <Tabs.Screen
-        name="index"
+        name="database/index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color, size }) => <Ionicons  size={28} name="home-outline" color={color} />,
+          title: 'Acceso a BBDD',
+          tabBarLabel: "Base de datos", // 🔹 Esto cambia el nombre en el menú de tabs
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="file-tray-stacked-outline" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="productos/index"
+        name="logout/index"
         options={{
-          title:'productos',
-          tabBarIcon: ({ color }) => <Ionicons size={28} name="film-outline" color={color} />,
+          title: 'Cerrar Sesión',
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="log-out-outline" color={color} />,
         }}
       />
-      <Tabs.Screen
-        name="configuracion/index"
-        options={{
-          title: 'Configuracion',
-          tabBarIcon: ({ color }) => <Ionicons size={28} name="construct-outline" color={color} />,
-        }}
-      />
+
     </Tabs>
   )
 }
