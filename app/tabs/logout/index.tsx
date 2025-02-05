@@ -7,8 +7,7 @@ const ScreenConfiguracion = () => {
   const router= useRouter();
   return (
     <View style={GlobalStyles.containerCentrado}>
-      <Text style= {GlobalStyles.titulo}>Desconectarse</Text>
-                  
+                 
             <View style={GlobalStyles.botonesLoginContainer}>
               <View style={GlobalStyles.loginboton}>
                 <Pressable  onPress={() => router.push("/tabs/database")} >
